@@ -3,34 +3,11 @@
 <head>  
     <title>TLM Kits Distribution</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <style> 
-        body {
-            background-image: url("1.jpg");
-            background-color: #cccccc;
-        }
-    </style>
 </head>
-<body>
-     
-     <div>
-        <nav class="navbar navbar-toggleable-md navbar-light" style="background-color: #003366;">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="true" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#" style="color:white">NIEPID</a>
-            <div class="collapse navbar-collapse" id="navbarColor03" aria-expanded="true" style>
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-            
+<body style="background-color:grey">
     <div class="container">
         <br>
-        <h2 style="text-align:center;color:white;">NIEPID TLM Kits Distribution</h2>
+        <h2 style="text-align:center">NIEPID TLM Kits Distribution</h2>
         <br>
     </div>
     <div class="container col-md-8">
@@ -38,14 +15,10 @@
         <br>
         <div class="form-row">
             <label for="aadhar" class="col-form-label">Aadhar Number :</label>
-            <div class="form-group col-md-3">
-                <input type="text" class="form-control" id="aadhar" minlength="12" required>
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" id="aadhar">
             </div>
-            <label for="regno" class="col-form-label">Registration No :</label>
-            <div class="form-group col-md-2">
-                <input type="text" class="form-control" id="regno" minlength="6" required>
-            </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-4">
                 <input class="btn btn-secondary" type="submit" name="get" value="Get Details">
             </div>
         </div>
@@ -125,14 +98,17 @@
             <br>
         </div>
         <div class="form-row">
-            <div class="form-group col-md-4">
-                <label for="type_aid" class="col-form-label">Type of Aid (Recommended)</label>
-                <input type="text" class="form-control" id="type_aid" disabled>
+            <div class="form-group col-md-3">
+                <label for="type_aid" class="col-form-label">Type of Aid (Given)</label>
+                <input type="text" class="form-control" id="type_aid">
             </div>
             <div class="form-group col-md-3">
                 <label for="date" class="col-form-label">Date on which given</label>
-                <?php $date1=date("d/m/Y"); ?>
-                <input type="text" class="form-control" id="date" placeholder="DD/MM/YY" disabled value="<?php echo $date1; ?>">
+                <input type="text" class="form-control" id="date" placeholder="DD/MM/YY">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="cost" class="col-form-label">Cost of Aid</label>
+                <input type="text" class="form-control" id="cost">
             </div>
             <div class="form-group col-md-3">
                 <label for="total_cost" class="col-form-label">Total Cost of Aid</label>
@@ -151,33 +127,10 @@
                 <label for="subsidy" class="col-form-label">Subsidy Provided</label>
                 <input type="text" class="form-control" id="subsidy">
             </div>
-            <label for="sex" class="col-form-label">Outstation Beneficiary?</label>
             <div class="form-group col-md-3">
-                <div class="form-check form-check-inline">
-                    <br><br>
-                    <input class="form-check-input" type="radio" name="ob" id="OBYes" value="Yes" onclick="ShowHideDiv()"> Yes       
-                </div>
-                <div class="form-check form-check-inline">
-                </div>
-                <div class="form-check form-check-inline">
-                    <br><br>
-                    <input class="form-check-input" type="radio" name="ob" id="OBNo" value="No" onclick="ShowHideDiv()"> No
-                </div>
+                <label for="paid_ben" class="col-form-label">Outstation Beneficiary</label>
+                <input type="text" class="form-control" id="paid_ben">
             </div>
-            <script>
-                function ShowHideDiv() {
-                var OBYes = document.getElementById("OBYes");
-                var dvtext = document.getElementById("dvtext");
-                dvtext.style.display = OBYes.checked ? "block" : "none";
-                }
-            </script>  
-            <div class="form-group col-md-3" id="dvtext" style="display:none">
-                <label for="subsidy" class="col-form-label">Enter Beneficiary amount</label>
-                <input type="text" class="form-control" id="OBamt">
-            </div>
-              
-        </div>
-        <div class="form-row">
             <div class="form-group col-md-3">
                 <label for="paid_expen" class="col-form-label">Board & Lodging expenses</label>
                 <input type="text" class="form-control" id="paid_expen">
@@ -200,32 +153,6 @@
             <div class="form-group col-md-3">
                 <label for="last_date" class="col-form-label">Date of Aids last received</label>
                 <input type="text" class="form-control" id="last_date" placeholder="DD/MM/YY">
-            </div>
-        </div>
-        <div class="form-row">
-            <label for="sex" class="col-form-label">Travel Allowance?</label>
-            <div class="form-group col-md-3">
-                <div class="form-check form-check-inline">
-                    <br><br>
-                    <input class="form-check-input" type="radio" name="ta" id="TAYes" value="Yes" onclick="ShowHideDiv2()"> Yes       
-                </div>
-                <div class="form-check form-check-inline">
-                </div>
-                <div class="form-check form-check-inline">
-                    <br><br>
-                    <input class="form-check-input" type="radio" name="ta" id="TANo" value="No" onclick="ShowHideDiv2()"> No
-                </div>
-            </div>
-            <script>
-                function ShowHideDiv2() {
-                var OBYes = document.getElementById("TAYes");
-                var dvtext2 = document.getElementById("dvtext2");
-                dvtext2.style.display = TAYes.checked ? "block" : "none";
-                }
-            </script>  
-            <div class="form-group col-md-3" id="dvtext2" style="display:none">
-                <label for="subsidy" class="col-form-label">Enter amount</label>
-                <input type="text" class="form-control" id="TAamt">
             </div>
         </div>
         <div class="form-row">
