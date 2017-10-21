@@ -1,0 +1,45 @@
+<html lang="en">
+<head>  
+    <title>Details page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style> 
+        body {
+            background-image: url("1.jpg");
+            background-color: #cccccc;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <h2 style="text-align:center;color:white;">NIEPID TLM Registration Details</h2>
+        <br>
+    </div>
+    <div class="container col-md-8">
+    <form action="retrieve.php" method="POST" id="getDetails" style="border:1px;border-style:solid;padding:25px;background-color:white;">
+        <br>
+        
+        <div class="form-row">
+        <label for="aadhar" class="col-form-label">Aadhar Number :</label>
+        <div class="form-group col-md-3">
+            <input type="text" name="aadhar" class="form-control" minlength="2" required>
+        </div>
+        <label for="Name" class="col-form-label">Name :</label>
+        <div class="form-group col-md-3">
+            <input type="text" name="name" class="form-control" minlength="4" required>
+        </div>
+        <div class="form-group col-md-2">
+            <input class="btn btn-secondary" type="submit" form="getDetails" value="Get Details">
+        </div>
+    </div>
+
+    </form>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </body>
+    </html>
